@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-
+import {Route, Redirect} from 'react-router-dom'
 
 export default class Signin extends Component {
 
@@ -11,7 +11,8 @@ export default class Signin extends Component {
     this.state = {
 
       email:"",
-      pass: ""
+      pass: "",
+      redirect:false
     }
   }
 
@@ -44,6 +45,7 @@ export default class Signin extends Component {
         }
   
   render() {
+
     return (
 
         <form
@@ -56,6 +58,8 @@ export default class Signin extends Component {
         <input type="submit" value="LOGIN" />
 
         </form>
+
+    
 
 
     )

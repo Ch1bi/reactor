@@ -4,6 +4,7 @@ import {Header} from './components/Header'
 import Signup from './components/Signup'
 import Signin from './components/Signin'
 
+
 class Onboard extends Component {
 
   constructor(props){
@@ -11,49 +12,55 @@ class Onboard extends Component {
     super(props)
 
     this.state = {
-
-      selectedRoute: "Sign Up"
+      
+      selectedRoute: "SIGN UP"
     }
   }
 
   updateRoute = (route) =>{
-    // this.setState({selectedRoute:route})
-    // console.log(this.state.route)
+    
     this.setState({selectedRoute:route.target.firstChild.nodeValue})    
-    console.log(route.target.firstChild.nodeValue)
   }
 
 
   
   render() {
 
-    let routes = ['Sign Up', 'Login']
+    let routes = ['SIGN UP', 'LOGIN']
 
     return (
-      <div className="onboard">
 
-      <Header/> 
 
-      <ul className="routes">
-      {routes.map((route)=>{
 
-        return(
+        <div className="onboard">
 
-          <li
-          style={route === this.state.selectedRoute ? { boxShadow: "inset 0 1px 0 #ffffff, inset 0 1px 0 #ffffff"} : null}
-          onClick={this.updateRoute}>{route}</li>
-        )
-      })}
        
         
-      </ul>
+              <Header/> 
 
+              <ul className="routes">
+              {routes.map((route)=>{
 
-      <Signup/>
-      {/* <Signin/> */}
+                return(
+
+                  <li
+                  style={route === this.state.selectedRoute ? {borderBottom:'3px #ffffff solid', color:'#ffffff'} : null}
+                  onClick={this.updateRoute}
+                  key={route}>{route}</li>
+                )
+              })}
+              
+                
+              </ul>
+
+              
+            {this.state.selectedRoute === "SIGN UP" ? <Signup/> : <Signin/>}
+
+            
+              
+              </div>
       
-       
-      </div>
+     
     )
   }
 }
