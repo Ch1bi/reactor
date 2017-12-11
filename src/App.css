@@ -1,0 +1,152 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+ margin:0;
+ padding:0;
+ border:0;
+ outline:0;
+ font-size:100%;
+ vertical-align:baseline;
+ background:transparent;
+}
+
+.comp-name{
+    
+    position:absolute;
+    top:0;
+    color:#ffffff;
+    font-size: 50px;
+    letter-spacing: 0.6px;
+    padding: 0.5em 0 0 3em;
+  }
+
+  form{
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-content: center;
+  }
+
+  input[name=user]{
+    
+    padding: 15px 15px;
+    margin: 8px 0;
+    border-radius: 25px;
+    border: none;
+    width:250px;
+    background: rgba(19, 19, 19, 0.098);
+    align-self: center;
+    box-sizing: border-box;
+
+    background-image: url('./img/ic-username.png');
+    background-size: 18px 18px;
+    background-position: 20px 14px;
+    background-repeat: no-repeat; 
+    text-indent: 40px;
+    color:#d8d8d8;
+}
+
+  
+
+  input[name=email]{
+    
+    padding: 15px 15px;
+    margin: 8px 0;
+    border-radius: 25px;
+    border: none;
+    width:250px;
+    background: rgba(19, 19, 19, 0.098);
+    align-self: center;
+    box-sizing: border-box;
+
+    background-image: url('./img/ic-email.png');
+    background-size: 18px 18px;
+    background-position: 20px 14px;
+    background-repeat: no-repeat; 
+    text-indent: 40px;
+    color:#d8d8d8;
+    
+}
+
+input[name=pass]{
+
+
+  padding: 15px 15px;
+  margin: 8px 0;
+  border-radius: 25px;
+  border: none;
+  width:250px;
+  background: rgba(19, 19, 19, 0.098);
+  align-self: center;
+  box-sizing: border-box;
+
+  background-image: url('./img/ic-password.png');
+  background-size: 18px 18px;
+  background-position: 20px 14px;
+  background-repeat: no-repeat; 
+  text-indent: 40px;
+  color:#d8d8d8;
+
+  
+}
+
+
+input[type=submit]{
+
+  padding: 15px 15px;
+  margin:25px 0;
+  border-radius: 25px;
+  border: none;
+  width:250px;
+  align-self: center;
+  background:#E43c4b;
+  color:#ffffff;
+  box-sizing: border-box;
+}
+
+input:focus {
+  color:#ffffff;
+}
+
+.onboard{
+  
+  display: flex;
+  flex-direction: column;
+  background-image: url('./img/onboarding-bg.png');
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh;
+}
+
+
+
+.routes{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  margin:0 2em 2em 0  ;
+
+}
+
+
+.routes li{
+
+  list-style-type: none;
+  /* padding-right:2em; */
+  font-size:24px;
+  margin-right:2em;
+  color:#d8d8d8;
+  
+}
