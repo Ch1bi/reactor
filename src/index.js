@@ -1,8 +1,15 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import webFont from 'webfontloader'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import createRoutes from './components/routes'
+
+const routes = createRoutes();
+
+webFont.load({
+    google: {
+      families: ['Nunito', 'sans-serif']
+    }
+  });
+
+ReactDOM.render(routes, document.getElementById('root'));

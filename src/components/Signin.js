@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import {Route, Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 
 export default class Signin extends Component {
+
+  
 
   constructor(props){
 
@@ -29,37 +30,34 @@ export default class Signin extends Component {
     this.signin()
 
   }
-
-  signin = ()=>{
-
-            let bodyFormData = new FormData()
-            bodyFormData.set('email', this.state.email)
-            bodyFormData.set('pass', this.state.pass)
-
-            return axios.post('http://dev3.apppartner.com/Reactors/scripts/user-login.php', {data:bodyFormData, withCredentials:true})
-
-            .then((data)=>{
-    
-                console.log(data)
-            })
-        }
   
   render() {
 
+    //redirects users to the home on login
+     if(this.state.redirect){
+     
+     return <Redirect to={'/home'}/>
+     }
+    
+
     return (
 
-        <form
-        onSubmit={this.handleSubmit}>
-
-        <input type="text" name="email" placeholder="Email" value={this.state.email}  onChange={this.handleChange}/>
-
-        <input type="password" name="pass" placeholder="Password" value={this.state.pass}  onChange={this.handleChange}/>
         
-        <input type="submit" value="LOGIN" />
+        <div>
+          
+        <form
+          onSubmit={this.handleSubmit}>
+
+          <input type="text" name="email" placeholder="Email" value={this.state.email}  onChange={this.handleChange}/>
+
+          <input type="password" name="pass" placeholder="Password" value={this.state.pass}  onChange={this.handleChange}/>
+          
+          <input type="submit" value="LOGIN" />
 
         </form>
+        </div>
+        
 
-    
 
 
     )

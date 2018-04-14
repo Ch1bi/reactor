@@ -1,3 +1,4 @@
+/* CSS reset */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -19,15 +20,62 @@ time, mark, audio, video {
  background:transparent;
 }
 
+.google{
+
+  
+  padding: 15px 15px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: none;
+  width:250px;
+  background: #DD4B39;
+  color:white;
+  align-self: center;
+  box-sizing: border-box;
+  outline:none;
+  font-weight:500;
+  font-size:12pt;
+}
+
 .comp-name{
     
     position:absolute;
-    top:0;
+    top:0.5em;
     color:#ffffff;
     font-size: 24px;
     letter-spacing: 0.6px;
     padding: 0.5em 0 0 3em;
   }
+
+  /* styles for signin & signup */
+  .onboard{
+    
+    display: flex;
+    flex-direction: column;
+    background-image: url('./img/onboarding-bg.png');
+    justify-content: center;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+  }
+
+    .onboard h1{
+
+      color:#fff;
+      font-family: Nunito;
+      align-self: center;
+      font-size:23pt;
+      margin-top:1em;
+      font-weight: 100;
+    }
+
+    .onboard p{
+
+      margin:1em 0;
+      color:#fff;
+      align-self: center;
+    }
 
   form{
 
@@ -54,6 +102,8 @@ time, mark, audio, video {
     background-repeat: no-repeat; 
     text-indent: 40px;
     color:#d8d8d8;
+  outline:none; 
+  
 }
 
   
@@ -74,8 +124,9 @@ time, mark, audio, video {
     background-position: 20px 14px;
     background-repeat: no-repeat; 
     text-indent: 40px;
-    color:#d8d8d8;
-    
+    color:white;
+    outline:none; 
+  
 }
 
 input[name=pass]{
@@ -95,8 +146,9 @@ input[name=pass]{
   background-position: 20px 14px;
   background-repeat: no-repeat; 
   text-indent: 40px;
-  color:#d8d8d8;
-
+  color:#ffffff;
+  outline:none; 
+  
   
 }
 
@@ -112,21 +164,11 @@ input[type=submit]{
   background:#E43c4b;
   color:#ffffff;
   box-sizing: border-box;
+  outline:none; 
 }
 
 input:focus {
   color:#ffffff;
-}
-
-.onboard{
-  
-  display: flex;
-  flex-direction: column;
-  background-image: url('./img/onboarding-bg.png');
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height:100vh;
 }
 
 
@@ -144,9 +186,918 @@ input:focus {
 .routes li{
 
   list-style-type: none;
-  /* padding-right:2em; */
   font-size:24px;
   margin-right:2em;
   color:#d8d8d8;
   
 }
+
+/* Styles for Home Page */
+
+.header-bg{
+
+  background-image: url('./img/banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%; 
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.greeting{
+
+  color:#ffffff;
+  font-size:50px;
+  text-align:center;
+
+}
+
+
+
+.what-we-do{
+
+  background-color:#ffffff;
+  width:100%;
+  height:250px;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.what-we-do-title{
+
+  flex-shrink: 1;
+  color:#e43c4b;  
+  font-size:24px;
+  font-family: Nunito, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.we-do-title{
+
+  font-family: Nunito, sans-serif;
+  color: #1e3656;  
+  
+}
+
+.we-do-description{
+
+  font-family: Nunito, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  color: #1e3656;  
+
+}
+
+/* Styles for cuisine */
+
+.cuisine-container{
+
+  background-color:#f1faef;
+  height:350px;
+  display:flex;
+  flex-direction: column;
+  border-top: 1px solid #d8d8d8;
+  justify-content: center;
+  align-content: center;
+}
+
+.cuisine-1, .cuisine-2{
+
+  margin:0 6em 0 2em;
+}
+
+
+
+.cuisines{
+
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-left:3em;
+}
+
+.cuisines img{
+  
+  
+      box-shadow: 2px 2px 5px #7c7c7c;
+  }
+
+
+
+.cuisine-heading{
+
+  color: #1e3656;    
+  font-size:14px;
+  font-family: Nunito, sans-serif;
+  font-weight: 700;
+  padding-bottom: 1em;
+}
+
+.cuisine-description{
+
+  font-family: Nunito, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #1e3656;  
+
+}
+/* maui styles */
+
+.maui-container{
+
+  height:350px;
+  background-color:#ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #d8d8d8;
+  
+  
+}
+
+
+.maui-heading{
+
+  align-self: center;
+  font-family: Nunito, sans-serif;
+  padding-bottom: 2em;
+  text-align: center;
+
+}
+
+.maui-images{
+  
+    display: flex;
+    justify-content: center;
+    }
+  
+  .place-1, .place-2, .place-3, .place-4{
+  
+    display: flex;
+    flex-direction: column;
+    padding: 0 2.5em 0 2em;
+    
+  }
+
+  .place-1 img, .place-2 img, .place-3 img, .place-4 img{
+    
+    box-shadow: 2px 2px 5px #7c7c7c;
+    
+    }
+  
+  
+
+.maui-title{
+
+  font-family: Nunito, sans-serif;
+  font-size: 14px;
+  color:#1e3656;
+  letter-spacing: 0.2px;
+  text-align: center;
+  
+}
+
+.maui-address{
+
+  font-family: Nunito, sans-serif;
+  font-size: 12px;
+  color:#7c7c7c;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  text-align: center;
+  
+
+}
+
+/* subscribe styles */
+.subscribe-container{
+  
+          
+          height: 200px;
+          background-color:#ffffff;
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .subscribe-heading{
+
+          font-family: Nunito, sans-serif;
+          font-size: 24px;
+          letter-spacing: 0.4px;
+          color:#e43c4b;
+          align-self: center;
+          padding-bottom: 1em;
+        }
+
+        .subscribe-form{
+
+          margin:0 auto;
+        }
+
+        .subscribe-input{
+          
+          height:20px;
+          width: 370px;
+          padding:1em 0.5em 1em 1em;
+          outline:none;
+          color:#d8d8d8;
+         }
+
+        .subscribe-button{
+          margin:-20px;
+          border:none;
+          border-radius: 30px;
+          background-color: #1e3656;
+          color:#ffffff;
+          padding: 1.3em 2.5em;
+          font-family: Nunito, sans-serif;
+          font-size: 12px;
+          outline:none;
+        }
+
+        footer{
+
+          height: 100px;
+          background-color:#1e3656;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        
+        }
+
+        footer h3{
+
+          color:#ffffff;
+          font-family: Nunito, sans-serif;
+          font-size: 14px;
+          font-weight: 300;
+        }
+
+        .signout{
+
+          position: absolute;
+          top:95px;
+          right:65px;
+          padding: 5px 5px;
+          margin: 8px 0;
+          border-radius: 5px;
+          border: none;
+          outline:none;
+          width:100px;
+          background: transparent;
+          color:white;
+          align-self: center;
+          box-sizing: border-box;
+          font-size:10pt;
+          font-weight:500;
+        }
+
+        .picture{
+          position: absolute;
+          top:25px;
+          right:80px;
+          border-radius:50%;
+          width:75px;
+  
+        }
+
+
+
+/* media queries */
+
+
+@media(min-width:320px){
+
+  .onboard h1{
+
+    color:#fff;
+    font-family: Nunito;
+    align-self: center;
+    text-align: center;
+    font-size:16pt;
+    margin-top:1em;
+    font-weight: 100;
+  }
+
+  .onboard p{
+
+    margin:1em 0;
+    color:#fff;
+    align-self: center;
+    font-weight: 100;
+  }
+
+  /* header styles */
+
+  .greeting{
+
+    font-size:20pt;
+    max-width: 300px;
+  }
+
+    .comp-name{
+    
+      position:absolute;
+      top:0.5em;
+      color:#ffffff;
+      font-size: 24px;
+      letter-spacing: 0.6px;
+      padding: 0 1em;
+    }
+
+    .picture{
+
+      width:100px;
+      top:120px;
+      right:110px;
+    }
+  
+  /* what we do styles */
+
+  .what-we-do{
+    
+        flex-direction: column;
+      }
+    
+      .we-do-title, .we-do-description{
+    
+        text-align: center;
+      }
+
+      .we-do-description{
+
+        max-width: 280px;
+        font-size:12pt;
+      }
+
+
+
+      /* cuisine styles */
+  .cuisine-container, .cuisines{
+    
+        flex-direction: column;
+      }
+  
+
+  .cuisine-container{
+
+    justify-content: initial;
+    height:650px;
+  }
+
+  .cuisines img{
+
+    /* width:70%; */
+    align-self: center;
+    margin:1em 0 1em 0;
+  }
+
+  .cuisine-1, .cuisine-2{
+
+    margin: 0;
+    text-align: center;
+  }
+
+  .cuisine-1{
+
+    margin-bottom:2em;
+  }
+
+
+  /* maui styles */
+
+  .maui-container{
+
+    justify-content: initial;
+    height:930px;
+  }
+
+  .maui-heading{
+
+    padding-top:1em;
+  }
+
+.maui-images{
+  
+    flex-direction: column;
+    align-self: center;
+    
+  }
+
+  .place-1, .place-2, .place-3, .place-4{
+    
+      padding-bottom: 1em;
+      
+    }
+
+    .place-1 img, .place-2 img, .place-3 img, .place-4 img{
+      
+      margin-bottom:0.5em;      
+      }
+
+      /* Subscribe styles */
+
+      .subscribe-container{
+
+        display:flex;
+      }
+
+      .subscribe-heading{
+
+        max-width: 280px;
+        text-align: center;
+      }
+
+      .subscribe-form{
+
+        display:flex;
+        justify-content: space-between;
+        
+      }
+
+      .subscribe-input{
+
+        width:70%;
+      }
+
+      .subscribe-button{
+
+          border-radius: 5px;
+          border:none;
+          background-color: #1e3656;
+          color:#ffffff;
+          /* padding: 0.1em 0.5em; */
+          font-family: Nunito, sans-serif;
+          font-size: 9pt;
+          outline:none;
+          max-height: 50px;
+          margin-top:0.5em;
+      }
+
+      
+
+  }
+  
+
+  @media(min-width:375px){
+
+    .picture{
+
+      right:150px;
+      top:150px;
+    }
+  }
+
+  @media(min-width:1024px){
+
+    .google{
+
+  
+      padding: 15px 15px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: none;
+      width:250px;
+      background: #DD4B39;
+      color:white;
+      align-self: center;
+      box-sizing: border-box;
+      outline:none;
+      font-weight:500;
+      font-size:12pt;
+    }
+    
+    .comp-name{
+        
+        position:absolute;
+        top:0.5em;
+        color:#ffffff;
+        font-size: 24px;
+        letter-spacing: 0.6px;
+        padding: 0.5em 0 0 3em;
+      }
+    
+      /* styles for signin & signup */
+      .onboard{
+        
+        display: flex;
+        flex-direction: column;
+        background-image: url('./img/onboarding-bg.png');
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100vh;
+      }
+    
+    
+    
+      form{
+    
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-content: center;
+      }
+    
+      input[name=user]{
+        
+        padding: 15px 15px;
+        margin: 8px 0;
+        border-radius: 25px;
+        border: none;
+        width:250px;
+        background: rgba(19, 19, 19, 0.098);
+        align-self: center;
+        box-sizing: border-box;
+    
+        background-image: url('./img/ic-username.png');
+        background-size: 18px 18px;
+        background-position: 20px 14px;
+        background-repeat: no-repeat; 
+        text-indent: 40px;
+        color:#d8d8d8;
+      outline:none; 
+      
+    }
+    
+      
+    
+      input[name=email]{
+        
+        padding: 15px 15px;
+        margin: 8px 0;
+        border-radius: 25px;
+        border: none;
+        width:250px;
+        background: rgba(19, 19, 19, 0.098);
+        align-self: center;
+        box-sizing: border-box;
+    
+        background-image: url('./img/ic-email.png');
+        background-size: 18px 18px;
+        background-position: 20px 14px;
+        background-repeat: no-repeat; 
+        text-indent: 40px;
+        color:white;
+        outline:none; 
+      
+    }
+    
+    input[name=pass]{
+    
+    
+      padding: 15px 15px;
+      margin: 8px 0;
+      border-radius: 25px;
+      border: none;
+      width:250px;
+      background: rgba(19, 19, 19, 0.098);
+      align-self: center;
+      box-sizing: border-box;
+    
+      background-image: url('./img/ic-password.png');
+      background-size: 18px 18px;
+      background-position: 20px 14px;
+      background-repeat: no-repeat; 
+      text-indent: 40px;
+      color:#ffffff;
+      outline:none; 
+      
+      
+    }
+    
+    
+    input[type=submit]{
+    
+      padding: 15px 15px;
+      margin:25px 0;
+      border-radius: 25px;
+      border: none;
+      width:250px;
+      align-self: center;
+      background:#E43c4b;
+      color:#ffffff;
+      box-sizing: border-box;
+      outline:none; 
+    }
+    
+    input:focus {
+      color:#ffffff;
+    }
+    
+    
+    
+    .routes{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-self: center;
+      margin:0 2em 2em 0  ;
+    
+    }
+    
+    
+    .routes li{
+    
+      list-style-type: none;
+      font-size:24px;
+      margin-right:2em;
+      color:#d8d8d8;
+      
+    }
+    
+    /* Styles for Home Page */
+    
+    .header-bg{
+    
+      background-image: url('./img/banner.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width:100%; 
+      height:100vh;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    
+    .greeting{
+    
+      color:#ffffff;
+      font-size:50px;
+      text-align:center;
+      max-width:700px;
+    
+    }
+    
+    
+    
+    .what-we-do{
+    
+      background-color:#ffffff;
+      width:100%;
+      height:250px;
+      display:flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    
+    .what-we-do-title{
+    
+      flex-shrink: 1;
+      color:#e43c4b;  
+      font-size:24px;
+      font-family: Nunito, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+    
+    .we-do-title{
+    
+      font-family: Nunito, sans-serif;
+      color: #1e3656;  
+      
+    }
+    
+    .we-do-description{
+    
+      font-family: Nunito, sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      letter-spacing: 0.2px;
+      color: #1e3656;  
+    
+    }
+    
+    /* Styles for cuisine */
+    
+    .cuisine-container{
+    
+      background-color:#f1faef;
+      height:350px;
+      display:flex;
+      flex-direction: column;
+      border-top: 1px solid #d8d8d8;
+      justify-content: center;
+      align-content: center;
+    }
+    
+    .cuisine-1, .cuisine-2{
+    
+      margin:0 6em 0 2em;
+    }
+    
+    
+    
+    .cuisines{
+    
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+      margin-left:3em;
+    }
+    
+    .cuisines img{
+      
+      
+          box-shadow: 2px 2px 5px #7c7c7c;
+      }
+    
+    
+    
+    .cuisine-heading{
+    
+      color: #1e3656;    
+      font-size:14px;
+      font-family: Nunito, sans-serif;
+      font-weight: 700;
+      padding-bottom: 1em;
+    }
+    
+    .cuisine-description{
+    
+      font-family: Nunito, sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #1e3656;  
+    
+    }
+    /* maui styles */
+    
+    .maui-container{
+    
+      height:350px;
+      background-color:#ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: 1px solid #d8d8d8;
+      
+      
+    }
+    
+    
+    .maui-heading{
+    
+      align-self: center;
+      font-family: Nunito, sans-serif;
+      padding-bottom: 2em;
+      text-align: center;
+    
+    }
+    
+    .maui-images{
+      
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        }
+      
+      .place-1, .place-2, .place-3, .place-4{
+      
+        display: flex;
+        flex-direction: column;
+        padding: 0 2.5em 0 2em;
+        
+      }
+    
+      .place-1 img, .place-2 img, .place-3 img, .place-4 img{
+        
+        box-shadow: 2px 2px 5px #7c7c7c;
+        
+        }
+      
+      
+    
+    .maui-title{
+    
+      font-family: Nunito, sans-serif;
+      font-size: 14px;
+      color:#1e3656;
+      letter-spacing: 0.2px;
+      text-align: center;
+      
+    }
+    
+    .maui-address{
+    
+      font-family: Nunito, sans-serif;
+      font-size: 12px;
+      color:#7c7c7c;
+      font-weight: 300;
+      letter-spacing: 0.2px;
+      text-align: center;
+      
+    
+    }
+    
+    /* subscribe styles */
+    .subscribe-container{
+      
+              
+              height: 200px;
+              background-color:#ffffff;
+              display:flex;
+              flex-direction: column;
+              justify-content: center;
+              margin-top:1em;
+            }
+    
+            .subscribe-heading{
+    
+              font-family: Nunito, sans-serif;
+              font-size: 24px;
+              letter-spacing: 0.4px;
+              color:#e43c4b;
+              align-self: center;
+              padding-bottom: 1em;
+            }
+    
+            .subscribe-form{
+    
+              /* margin:0 auto; */
+              display:flex;
+              flex-direction: column;
+              align-content: center;
+            }
+    
+            .subscribe-input{
+              
+              height:20px;
+              width: 370px;
+              padding:1em 0.5em 1em 1em;
+              outline:none;
+              color:#d8d8d8;
+             }
+    
+            .subscribe-button{
+              border:none;
+              border-radius: 10px;
+              background-color: #1e3656;
+              color:#ffffff;
+              padding: 1.3em 2.5em;
+              font-family: Nunito, sans-serif;
+              font-size: 12px;
+              width:50%;
+              outline:none;
+              align-self: center;
+              margin:1em 1em;
+            }
+    
+            footer{
+    
+              height: 100px;
+              background-color:#1e3656;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            
+            }
+    
+            footer h3{
+    
+              color:#ffffff;
+              font-family: Nunito, sans-serif;
+              font-size: 14px;
+              font-weight: 300;
+            }
+    
+            .signout{
+    
+              position: absolute;
+              top:95px;
+              right:65px;
+              padding: 5px 5px;
+              margin: 8px 0;
+              border-radius: 5px;
+              border: none;
+              outline:none;
+              width:100px;
+              background: transparent;
+              color:white;
+              align-self: center;
+              box-sizing: border-box;
+              font-size:10pt;
+              font-weight:500;
+            }
+    
+            .picture{
+              position: absolute;
+              top:25px;
+              right:80px;
+              border-radius:50%;
+              width:75px;
+      
+            }
+  }

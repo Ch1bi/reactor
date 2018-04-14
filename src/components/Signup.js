@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-
 
 export default class Signup extends Component {
 
@@ -32,17 +30,21 @@ export default class Signup extends Component {
 
   signup = ()=>{
 
-            let bodyFormData = new FormData()
-            bodyFormData.set('user', this.state.user)
-            bodyFormData.set('email', this.state.email)
-            bodyFormData.set('pass', this.state.pass)
+    let user = {  
+                    user:this.state.user,
+                    email:this.state.email,
+                    password: this.state.pass
+                  }
+         
 
-            return axios.post('http://dev3.apppartner.com/Reactors/scripts/user-signup.php', {data:bodyFormData, withCredentials:true})
+            return axios.post('http://dev3.apppartner.com/Reactors/scripts/user-signup.php', {data:user, withCredentials:true})
 
             .then((data)=>{
     
                 console.log(data)
             })
+
+            .catch((err)=>console.log(err))
         }
   
   render() {
